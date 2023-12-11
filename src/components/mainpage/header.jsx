@@ -9,6 +9,9 @@ const receivedData = JSON.parse(
   decodeURIComponent(searchParams.get("data") || "{}")
 );
 function App() {
+
+
+
   let datebooking = useRef(null);
   let timebooking = useRef(null);
   let carbooking = useRef(null);
@@ -30,9 +33,27 @@ function App() {
           <button className="booknow" onClick={showbook}>
             BOOK
           </button>
-          <a className="name1" href="/profile">
+          <div style={{ display: "inline", cursor: "pointer" }} onClick={() => {
+              fetch("http://localhost:8080/balance",{
+                method:"POST",
+                  headers:{
+                    "Content-Type":"application/json"
+                  },body:receivedData.name
+              }).then((response) => response.json())
+              .then((data) => {
+                window.location.href = `/profile?data=${encodeURIComponent(
+                  JSON.stringify({
+                    name: receivedData.name,
+                    point: data
+                  })
+                )}`;
+              })
+              .catch(err => {
+                  console.log(err)
+              })
+          }} className="name1"  >
             {receivedData.role == 1 ? receivedData.name : <span>hello</span>}
-          </a>
+          </div>
         </div>
       </div>
 
@@ -125,10 +146,26 @@ function App() {
                     car: carbooking.current.value,
                     people: peoplebooking.current.value,
                     course: coursebooking.current.value,
+                    table_now: []
                   };
-                  window.location.href = `/booking?data=${encodeURIComponent(
-                    JSON.stringify(data)
-                  )}`;
+
+                  fetch("http://localhost:8080/gettable")
+                    .then(response => {
+                      if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                      }
+                      return response.json();
+                    })
+                    .then(input => {
+                      console.log("Data received:", input);
+                      data.table_now = input
+                      window.location.href = `/booking?data=${encodeURIComponent(
+                        JSON.stringify(data)
+                      )}`;
+                    })
+                    .catch(error => {
+                      console.error("Error fetching data:", error);
+                    });
                   //   fetch("http://localhost:8080/testapifb", {
                   //     method: "POST",
                   //     headers: {

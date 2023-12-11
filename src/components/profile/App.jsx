@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -10,8 +11,12 @@ import Header from '../mainpage/header'
 import ReactDOM from 'react-dom/client'
 
 function App() {
+  const searchParams = new URLSearchParams(window.location.search);
+  const receivedData = JSON.parse(
+    decodeURIComponent(searchParams.get("data") || "{}")
+  );
   let dataProfile = {
-    point: 20000,
+    point: receivedData.point,
     coupon: ["special", "10per"]
   }
   const [modal, setModal] = useState(false);

@@ -11,7 +11,7 @@ function App() {
 	let [table, setTable] = useState([true, true, true, true, true, true, true, true, true, true, true, true, true, true]);
 	let avialable_table = ["../src/assets/4ch.png", "../src/assets/6ch.png"];
 	let unavialable_table = ["../src/assets/already4.png", "../src/assets/already6.png"];
-	let reserved = [1, 2, 7, 12];
+	let reserved = receivedData.table_now
 	let full = [true, true, true, true, true, true, true, true, true, true, true, true, true, true];
 	for (let i = 0; i <= reserved.length; i++) {
 		full[reserved[i]] = false;
@@ -34,7 +34,6 @@ function App() {
 						car: receivedData.car,
 						people: receivedData.people,
 						course: receivedData.course,
-
 					})
 			}
 		}
@@ -110,6 +109,16 @@ function App() {
 							<div className="avaichair">UNAVAILABLE  <br /> <br />  <img src="../src/assets/unavailable.png" alt="" /></div>
 						</div>
 						<input style={{ margin: "30px", cursor: "pointer" }} className="submit" type="button" value="reserve" onClick={() => {
+							fetch("http://localhost:8080/booking",{
+								method:"POST",
+								headers:{
+									"Content-Type" : "application/json",
+									"Authorization": "a"
+								},body:JSON.stringify(bookingData)
+							}).then((Response)=>
+								console.log(reserved),
+								console.log(Response)
+							)
 							console.log(bookingData)
 						}} />
 					</div>

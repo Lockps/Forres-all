@@ -47,7 +47,7 @@ export default function App() {
                     <form>
                         <div className='showdetail'>
                             <img style={{ width: "",height:"200px", borderRadius: "20px" }} src="../src/assets/white.png" alt="" />
-                            <div style={{marginTop:"auto",textAlign:"start",color:"white",marginBottom:"auto"}}> 
+                            <div style={{marginLeft: "33px",marginTop:"auto",textAlign:"start",color:"white",marginBottom:"auto"}}> 
                                 <input type="checkbox" name="" id="" />Grilled lamb cutlets<br />
                                 <input type="checkbox" name="" id="" />Pomegranate glaze<br />
                                 <input type="checkbox" name="" id="" />Butternut squash<br />

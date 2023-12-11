@@ -1,25 +1,42 @@
 import Header from '../mainpage/headerstaff'
 import "./staff.css";
+import { useState } from 'react';
 export default function App() {
+  let table = [false, false, false, false, false, false, false, false, false, false, false, false, false, false,]
+  let [tableData, setTableData] = useState([]);
+
+  fetch("http://localhost:8080/gettable")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP ERROR : ${response.status}`)
+      }
+      return response.json()
+    }).then(input => {
+      input.sort(function (a, b) {
+        return a - b;
+      })
+      setTableData(input)
+    })
+
+  for (let i = 0; i < tableData.length; i++) {
+    table[tableData[i]] = true;
+  }
+
   return (
     <>
       <Header />
       <div className="ctner-stf">
-        
-        <a href="/staff/menu"><div className=''>table 1</div></a>
-        <div className=''>table 2</div>
-        <div className=''>table 3</div>
-        <div className=''>table 4</div>
-        <div className=''>table 5</div>
-        <div className=''>table 6</div>
-        <div className=''>table 7</div>
-        <div className=''>table 8</div>
-        <div className=''>table 9</div>
-        <div className=''>table 10</div>
-        <div className=''>table 11</div>
-        <div className=''>table 12</div>
-        <div className=''>table 13</div>
-      </div>
+        {tableData.map((data, index) => (
+          <div onClick={() => {
+            window.location.href = `/staff/menu?data=${encodeURIComponent(
+              JSON.stringify({
+                table: data,
+                course: "premium"
+              })
+            )}`;
+          }} style={{ cursor: 'pointer' }} key={index}>table {data}</div>
+        ))}
+      </div >
 
     </>
   );
