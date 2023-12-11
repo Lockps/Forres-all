@@ -1,0 +1,52 @@
+/* history.css */
+
+body {
+    background-color: #12221D;
+    margin: 0;
+    padding: 0;
+}
+
+.history {
+    margin: 20px;
+}
+
+.history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.history th, .history td {
+    border: 1px solid #000000;
+    padding: 15px;
+    text-align: left;
+}
+
+.history th {
+    background-color: #295b4d;
+    color: #ffffff; /* Set font color to white for column headers */
+}
+
+.history tr:nth-child(even) {
+    background-color: #1C362E;
+}
+
+.history tr:nth-child(odd) {
+    background-color: #1C362E; /* Set background color for odd rows */
+}
+
+.history td {
+    color: #e4d8ab; /* Set font color to black for table data */
+}
+.again{
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: rgb(108, 108, 108)
+}
+
+.again:hover{
+    background-color: rgb(151, 148, 148);
+    color: #dfdfdf;
+    transition: 0.3s;
+  }

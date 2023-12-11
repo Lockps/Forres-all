@@ -1,0 +1,225 @@
+* {
+	font-family: josefinsans;
+}
+
+.header {
+	text-align: center;
+	/* Center the content horizontally within the header */
+	background-color: black;
+}
+
+.logo-container {
+	display: inline-block;
+	height: 100%;
+}
+
+.logo {
+	display: block;
+	/* Make the logo image a block-level element */
+	margin: left;
+	/* Center the logo horizontally using auto margins */
+	height: 11vh;
+
+}
+
+.book {
+	font-size: 15px;
+	font-size: 1vw;
+	margin: 25px;
+	margin: 3vh;
+	float: right;
+	border: 1px solid #FFDE66;
+	height: 5vh;
+	width: 9vw;
+	background-color: black;
+	color: #FFDE66;
+}
+
+.user {
+	font-size: 15px;
+	margin: 25px;
+	margin: 3vh;
+	float: right;
+	border: 1px solid rgb(0, 0, 0);
+	height: 5vh;
+	width: 9vw;
+	background-color: black;
+	color: #FFDE66;
+}
+
+.containerpic {
+	position: relative;
+	text-align: center;
+	color: white;
+	z-index: -1;
+}
+
+.centered {
+	color: #FFDE66;
+	font-size: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-bottom: 500px;
+	width: 300px;
+	font-family: cinzel;
+}
+
+.abtus {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+	color: white;
+	font-size: 35px;
+	font-family: josefinsans;
+
+}
+
+.abtus- {
+	margin: 20px;
+	font-size: 30px;
+	text-align: center;
+	color: #FAEACD;
+	font-family: intaliano;
+}
+
+.abtus-- {
+	margin: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	font-family: josefinsans;
+}
+
+@font-face {
+	font-family: intaliano;
+	src: url(../../../public/Italianno-Regular.ttf);
+
+}
+
+@font-face {
+	font-family: josefinsans;
+	src: url(../../../public/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: josefinsansli;
+	src: url(../../../public/JosefinSans-Light.ttf);
+}
+
+@font-face {
+	font-family: cinzel;
+	src: url(../../../public/CinzelDecorative-Regular.ttf);
+}
+
+.flex-container {
+	width: 440px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-container>div {
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+}
+
+.flex-container img {
+	margin-left: 20px;
+	width: 200px;
+}
+
+.course {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.premium:hover{
+	opacity: 0.5;
+}
+
+
+.centerr{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-container>div span {
+	display: none; /* Initially hide the text */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px; 
+	color: rgb(255, 255, 255);/* Adjust font size as needed */
+}
+
+@media (min-width: 700px) {
+	.centered {
+		color: #FFDE66;
+		font-size: 100px;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-bottom: 500px;
+		width: 500px;
+	}
+
+	.flex-container {
+		width: 700px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.flex-container>div {
+		text-align: center;
+		line-height: 75px;
+		font-size: 30px;
+		position: relative; /* Add relative positioning */
+	}
+	
+	.flex-container img {
+		margin-right: 10px;
+		width: 200px;
+		transition: transform 0.3s; /* Add smooth transition for the hover effect */
+	}
+	
+	/* Add styles for the hover effect */
+	.flex-container>div:hover img {
+		opacity: 0.5; /* Increase the size on hover */
+	}
+	
+	/* Add styles for the centered text */
+	.flex-container>div span {
+		display: none	; /* Initially hide the text */
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 30px; 
+		color: rgb(255, 255, 255);
+		line-height: 30px;
+	}
+	
+	/* Show the text on hover */
+	.flex-container>div:hover span {
+		display: block;
+	}
+	
+
+	.course {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+}

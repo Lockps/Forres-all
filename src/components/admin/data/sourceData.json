@@ -1,0 +1,32 @@
+[
+  {
+    "label": "premium",
+    "value": 1145,
+    "price": 35000
+  },
+  {
+    "label": "alaska",
+    "value": 1120,
+    "price": 46000
+  },
+  {
+    "label": "dimsum",
+    "value": 970,
+    "price": 42000
+  },
+  {
+    "label": "izakaya",
+    "value": 1400,
+    "price": 37000
+  },
+  {
+    "label": "yakiniku",
+    "value": 1254,
+    "price": 30000
+  },
+  {
+    "label": "stir",
+    "value": 876,
+    "price": 45000
+  }
+]

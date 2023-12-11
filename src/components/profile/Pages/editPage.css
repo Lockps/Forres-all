@@ -1,0 +1,79 @@
+
+.edit {
+    background-color: #12221D;
+    text-align: center;
+    height: 100vh;
+    
+  }
+  .back{
+    background-color: inherit;
+    border: none;
+    margin-top: 30px;
+    
+    
+  }
+.Profile1{
+    width: 300px;
+    margin-top: 50px;
+}
+.name{
+  color: antiquewhite;
+  font-size: 25px;
+}
+
+.Change{
+  margin-bottom: 25px;
+  height: 50px;
+  width: 113px;
+  font-size: 16px;
+  color: #12221D;
+  background-color: #e9cf71;
+  border-radius: 20px
+}
+.Change:hover{
+  background-color: #eed478;
+  color: #d2b756;
+  transition: 0.3s;
+
+}
+.keepbox{  
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 850px;
+}
+.letter{
+  color: antiquewhite;
+  text-align: left;
+  font-size: 15px;
+}
+.box{
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  margin-top:20px ;
+  
+}
+.namebox{
+  margin-bottom: 20px;
+  height: 25px;
+  width: 98%;
+  background-color: antiquewhite;
+}
+.savebut{
+  margin-top: 25px;
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(108, 108, 108)
+  
+}
+
+.savebut:hover{
+  background-color: rgb(151, 148, 148);
+  color: #dfdfdf;
+  transition: 0.3s;
+}

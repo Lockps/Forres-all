@@ -1,0 +1,119 @@
+.App1 {
+  text-align: center;
+  background-color: #12221D;
+  height: 100vh;
+}
+
+.img-Profile{
+  width: 300px;
+}
+
+.text1{
+  margin-top: 10px;
+  font-size: 50;
+  color: aliceblue;
+}
+
+.icon-container1{
+  display: flex;
+  justify-content: center;
+}
+.icon-button1{
+  padding: 10px;
+  margin-right: 8px; 
+  border: none;
+  color: antiquewhite;
+  background-color: inherit;
+  font-size: 26px;
+}
+.icon-button:hover{
+  color: cadetblue;
+  transition: 0.3s;
+}
+.choice-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.choice-item {
+  padding: 10px;
+  margin-right: 8px; 
+  border: none;
+  color: antiquewhite;
+  background-color: inherit;
+  font-size: 26px;
+}
+
+.choice-item:hover{
+  color: aqua;
+  transition: 0.3s;
+}
+.depost-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.depost-item {
+  padding: 10px;
+  margin: 8px;
+  margin-right: 40px;
+  color: antiquewhite;
+  font-size: 26px;
+}
+.depost-button{
+  margin-top: 10px;
+  height: 50px;
+  width: 110px;
+  border-color:#FFDE66 ;
+  font-size: 16px;
+  color: #FFDE66;
+  background-color: #12221D;
+}
+.depost-button:hover{
+  background-color: #FFDE66;
+  color: black;
+  transition: 0.3s;
+}
+.accept{
+  color: #ceb86a;
+  margin-bottom: 15px;
+}
+.BUT{
+  border-radius: 8px;
+  width: 70px;
+  padding: 2px;
+  margin: 5px;
+  border-color:#dbe2b0 ;
+  font-size: 16px;
+  color: #dbe2b0;
+  background-color: #12221D;
+}
+.BUT:hover{
+  background-color: #FFDE66;
+  color: black;
+  transition: 0.3s;
+}
+
+.img1 {
+  width: 100px;
+  margin-bottom: 10px; /* Add margin to separate image and text */
+}
+
+.vou {
+  color: #ceb86a;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.coupon {
+  width: 100%; /* Make the image width 100% of its container */
+  max-width: 600px; /* Set a maximum width for the image */
+}

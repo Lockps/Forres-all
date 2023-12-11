@@ -1,0 +1,23 @@
+.ctner-stf div{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    padding: 100px;
+    width: 500px;
+    background-color: aliceblue;
+    margin-left: 15vh;
+    margin-top: 10vh;
+    background-color: rgb(66, 22, 22);
+    border-radius: 20px;
+    background-image: url(../../assets/bgtable.png);
+}
+.ctner-stf {
+	  display: flex;
+	  flex-wrap: wrap;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+  a{
+  text-decoration: none;
+  }

@@ -1,0 +1,58 @@
+.reserve input[type=button], input[type=submit], input[type=reset]{
+	border: 1px solid #FFDE66;
+	height: 40px;
+	width: 140px;
+	background-color: black;
+	color: #FFDE66;
+}
+.mainbody img{
+    max-width: 10vw;
+}
+.reserve{
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    width: 99vw;
+    height: 99vh;
+}
+.t4{
+    width: 50px;
+}
+.t6{
+    width: 70px;
+}
+.stage{
+    height: 50px;
+}
+.kitchen{
+    height: 150px   ;
+}
+.alltable{
+    width: 99vw;
+}
+@media (min-width: 700px) { 
+    .t4{
+        width: 100px;
+    } 
+    .t6{
+        width: 150px;
+    } 
+    .stage{
+        height: 100px;
+    }
+    .reserve td{
+        padding: 20px;
+    }
+    .kitchen{
+        height: 500px   ;
+    }
+}
+.avaichair{
+    color: #FFDE66;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.alltable img{
+    cursor: pointer;
+}

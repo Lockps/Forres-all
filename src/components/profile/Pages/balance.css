@@ -1,0 +1,119 @@
+/* balance.css */
+
+.balance {
+    margin: 40px;
+    justify-content: center;
+  }
+  
+  .boxx {
+    background-color: #3a4f3a;
+  }
+  
+  .pay {
+    display: flex;
+    justify-content: left;
+    font-size: 25px;
+    color: #ffde66;
+    padding-left: 50px;
+    padding-top: 25px;
+  }
+  
+  .pay1 {
+    display: flex;
+    justify-content: space-between; /* Align children elements with space between */
+    color: #ffde66;
+    margin-top: 10px;
+    font-size: 35px;
+    padding-left: 100px;
+    padding-right: 60px; /* Adjusted padding-right for spacing */
+    padding-bottom: 25px;
+  }
+  
+  .depo {
+    height: 35px;
+    margin-top: 7px;
+    width: 100px;
+    border-color:#FFDE66;
+    color: #FFDE66;
+    background-color: #3A4F3A;
+   
+  }
+  .depo:hover{
+    background-color: #FFDE66;
+    color: black;
+    transition: 0.3s;
+  }
+  .tab{
+    margin-top: 40px;
+  }
+  .txt{
+    font-size: 35px;
+    color: #FFDE66;
+  }
+  .backbutton {
+    width: 100px;
+    height: 35px;
+    border-color: #ffde66;
+    color: #ffde66;
+    background-color: #3a4f3a;
+    margin-top: 10px;
+    
+
+}
+.backbutton-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.backbutton:hover {
+    background-color: #ffde66;
+    color: black;
+    transition: 0.3s;
+    
+}
+.aaa{
+   margin-left: auto;
+   margin-right: auto;
+}
+.top{
+  margin-top: 0;
+  padding: 20px;
+}
+.txt1{
+   color: #f1e1e1;
+   
+}
+
+.bank{
+  width: 25px;
+}
+.ton{
+  text-align: center;
+  margin-top: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.banshe{
+  width: 250px;
+  height: 25px;
+  background-color: #e4e0cf;
+}
+
+.term1{
+  margin-top: 25px;
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(108, 108, 108)
+  
+}
+
+.term1:hover{
+  background-color: rgb(151, 148, 148);
+  color: #dfdfdf;
+  transition: 0.3s;
+}

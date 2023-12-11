@@ -1,0 +1,111 @@
+[
+  {
+    "label": "Jan",
+    
+    "premium":130,
+    "alaska":120,
+    "dimsum":110,
+    "izakaya":80,
+    "yakiniku":160,
+    "stir":80
+  },
+  {
+    "label": "Feb",
+    "premium":100,
+    "alaska":80,
+    "dimsum":90,
+    "izakaya":180,
+    "yakiniku":260,
+    "stir":180
+  },
+  {
+    "label": "Mar",
+    "premium":230,
+    "alaska":50,
+    "dimsum":80,
+    "izakaya":100,
+    "yakiniku":160,
+    "stir":120
+  },
+  {
+    "label": "Apr",
+    "premium":86,
+    "alaska":45,
+    "dimsum":84,
+    "izakaya":245,
+    "yakiniku":133,
+    "stir":266
+  },
+  {
+    "label": "May",
+    "premium":111,
+    "alaska":154,
+    "dimsum":165,
+    "izakaya":132,
+    "yakiniku":121,
+    "stir":210
+  },
+  {
+    "label": "Jun",
+    "premium":125,
+    "alaska":213,
+    "dimsum":121,
+    "izakaya":76,
+    "yakiniku":154,
+    "stir":111
+  },
+  {
+    "label": "Jul",
+    "premium":156,
+    "alaska":123,
+    "dimsum":158,
+    "izakaya":149,
+    "yakiniku":114,
+    "stir":188
+  },
+  {
+    "label": "Aug",
+    "premium":121,
+    "alaska":156,
+    "dimsum":189,
+    "izakaya":180,
+    "yakiniku":290,
+    "stir":380
+  },
+  {
+    "label": "Sep",
+    "premium":330,
+    "alaska":220,
+    "dimsum":80,
+    "izakaya":180,
+    "yakiniku":170,
+    "stir":185
+  },
+  {
+    "label": "Oct",
+    "premium":135,
+    "alaska":145,
+    "dimsum":132,
+    "izakaya":167,
+    "yakiniku":89,
+    "stir":213
+  },
+  {
+    "label": "Nov",
+    "premium":321,
+    "alaska":223,
+    "dimsum":125,
+    "izakaya":20,
+    "yakiniku":345,
+    "stir":212
+  },
+  {
+    "label": "Dec",
+    "premium":330,
+    "alaska":420,
+    "dimsum":123,
+    "izakaya":222,
+    "yakiniku":57,
+    "stir":219
+  }
+]

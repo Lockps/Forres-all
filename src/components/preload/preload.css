@@ -1,0 +1,30 @@
+.preloader{
+    height: 100vh;
+    width: 100%;
+    background-color: #19231D;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    overflow: hidden;
+}
+.preloader .texts-container{
+    display: flex;
+    align-self: center;
+    height: 60px;
+    width: fit-content;
+    font-size: 100px;
+    font-weight: hidden;
+    color: #FFDE66;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cinzel;
+    margin-bottom: 5%;
+}
+.preloader span{
+    font-family: cinzel;
+}

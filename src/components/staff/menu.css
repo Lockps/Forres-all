@@ -1,0 +1,89 @@
+/* Default styles for larger screens */
+.nametable {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.showdetail {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    display: flex;
+}
+
+.textdetail {
+    color: white;
+    margin-left: 2vw;
+    font-size: 30px;
+}
+
+.detailofcourse {
+    display: flex;
+    padding-left: 10px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #13322B;
+    border-radius: 10px;
+    max-width: 1000px;
+}
+/* Add some styles for the button */
+.editbutton{
+    display: inline;
+    margin-left: auto;
+    margin-right: 20px;
+    border: none;
+    background-color: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Media query for phone screens */
+@media only screen and (max-width: 600px) {
+    .nametable {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .showdetail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textdetail {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .detailofcourse {
+        padding-left: 5px;
+        font-size: 18px;
+        max-width: 90%;
+    }
+}
+.finish{
+    background-color: gray;
+}
+.doing{
+    background-color: #776232;
+}
+input[type="checkbox"]{
+    margin: 10px;
+}
+.leftcus{
+    font-size: 30px;
+    height: 60px;
+    margin: 50px;
+    background-color: black;
+    color: #a59148;
+    border: 1px solid #a59148;
+    border-color: #a59148;
+}
