@@ -109,15 +109,21 @@ function App() {
 							<div className="avaichair">UNAVAILABLE  <br /> <br />  <img src="../src/assets/unavailable.png" alt="" /></div>
 						</div>
 						<input style={{ margin: "30px", cursor: "pointer" }} className="submit" type="button" value="reserve" onClick={() => {
-							fetch("http://localhost:8080/booking",{
-								method:"POST",
-								headers:{
-									"Content-Type" : "application/json",
+							fetch("http://localhost:8080/booking", {
+								method: "POST",
+								headers: {
+									"Content-Type": "application/json",
 									"Authorization": "a"
-								},body:JSON.stringify(bookingData)
-							}).then((Response)=>
-								console.log(reserved),
-								console.log(Response)
+								}, body: JSON.stringify(bookingData)
+							}).then((Response) => {
+								window.alert("จองสำเร็จ");
+								window.location.href = `/?data=${encodeURIComponent(
+									JSON.stringify({
+										name: receivedData.name,
+										role: receivedData.role
+									})
+								)}`;
+							}
 							)
 							console.log(bookingData)
 						}} />

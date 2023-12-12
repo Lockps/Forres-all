@@ -34,22 +34,23 @@ function App() {
             BOOK
           </button>
           <div style={{ display: "inline", cursor: "pointer" }} onClick={() => {
-              fetch("http://localhost:8080/balance",{
-                method:"POST",
-                  headers:{
-                    "Content-Type":"application/json"
-                  },body:receivedData.name
-              }).then((response) => response.json())
+            fetch("http://localhost:8080/balance", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              }, body: receivedData.name
+            }).then((response) => response.json())
               .then((data) => {
                 window.location.href = `/profile?data=${encodeURIComponent(
                   JSON.stringify({
                     name: receivedData.name,
-                    point: data
+                    point: data,
+                    role: receivedData.role
                   })
                 )}`;
               })
               .catch(err => {
-                  console.log(err)
+                console.log(err)
               })
           }} className="name1"  >
             {receivedData.role == 1 ? receivedData.name : <span>hello</span>}
@@ -146,11 +147,12 @@ function App() {
                     car: carbooking.current.value,
                     people: peoplebooking.current.value,
                     course: coursebooking.current.value,
-                    table_now: []
+                    table_now: [],
+                    role: receivedData.role
                   };
-
                   fetch("http://localhost:8080/gettable")
                     .then(response => {
+                      console.log(response);
                       if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                       }

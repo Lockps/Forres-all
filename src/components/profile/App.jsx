@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -126,7 +125,24 @@ function App() {
 
 
         <div className="choice-container">
-          <a href="/profile/balance"><button className="choice-item">BALANCE</button></a>
+          <button onClick={() => {
+            fetch(`http://localhost:8080/getbalance/${receivedData.name}`)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error(`HTTP ERROR : ${response.status}`)
+                }
+                return response.json()
+              }).then(input => {
+                window.location.href = `/profile/balance?data=${encodeURIComponent(
+                  JSON.stringify({
+                    name: receivedData.name,
+                    balance: input,
+                    role:receivedData.role
+                  })
+                )}`;
+              })
+
+          }} className="choice-item">BALANCE</button>
           <div className="choice-item"> | </div>
           <a href="/profile/editPage"><button className="choice-item">EDIT</button></a>
           <div className="choice-item"> | </div>

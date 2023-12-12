@@ -89,10 +89,29 @@ function App() {
                       return response.text(); // Process the response data as needed
                     })
                     .then((data) => {
+
+                      fetch("http://localhost:8080/staff/" + usernamesignin.current.value)
+                        .then(response => {
+                          if (!response.ok) {
+                            throw new Error(`HTTP ERROR : ${response.status}`)
+                          }
+                          return response.json()
+                        }).then(input => {
+                          if (input == 2){
+                            window.location.href = `/staff?data=${encodeURIComponent(
+                            JSON.stringify({
+                              name: usernamesignin.current.value,
+                            })
+                          )}`;}
+                          if (input == 3){
+                            window.location.href = `/admin?data=${encodeURIComponent(
+                            JSON.stringify({
+                              name: usernamesignin.current.value,
+                            })
+                          )}`;}
+                        })
+
                       if (data == "valid") {
-                        // navigate("/" + usernamesignin.current.value, {
-                        //   state: { id: 1, name: "sabaoon" },
-                        // });
                         window.location.href = `/?data=${encodeURIComponent(
                           JSON.stringify({
                             name: usernamesignin.current.value,
@@ -208,6 +227,8 @@ function App() {
                       if (!response.ok) {
                         throw new Error("Network response was not ok");
                       }
+                      window.alert("สมัครสำเร็จ")
+                      showsignup();
                       return response.json(); // Process the response data as needed
                     })
                     .then((data) => {
@@ -226,7 +247,7 @@ function App() {
                   backgroundColor: "#FFDE66",
                 }}
                 className="reserve-btn"
-                type="submit"
+                type="button"
                 value="SIGN UP"
               />
             </form>

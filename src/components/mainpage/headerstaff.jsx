@@ -9,14 +9,17 @@ function App() {
     const showbook = () => {
         setBooking(!booking)
     }
-
+    const searchParams = new URLSearchParams(window.location.search);
+    const receivedData = JSON.parse(
+        decodeURIComponent(searchParams.get("data") || "{}")
+    );
     return (
         <>
-            
+
             <div class="container">
                 <a className="" href="/staff"><img className="icon" src="../src/assets/logo.png" /></a>
                 <div class="mybutton2">
-                    <a className="name1" href="/profile">Staff</a>
+                    <a className="name1" href="/profile">{receivedData.name}</a>
                 </div>
             </div>
         </>

@@ -7,17 +7,31 @@ import Header from '../../mainpage/header'
 import { useRef } from 'react';
 export default function Balance() {
   const topup = useRef(null);
-
   const [top, setTop] = useState(false);
   const toggleModal4 = () => {
     console.log('asd')
     setTop(!top);
   };
 
+  const searchParams = new URLSearchParams(window.location.search);
+  const receivedData = JSON.parse(
+    decodeURIComponent(searchParams.get("data") || "{}")
+  );
   let dataTopup = [
     { paymentid: 133223, amount: 10000000, date: "22/2/12", status: "success" },
     { paymentid: 133225, amount: 32000000, date: "23/2/12", status: "fail" }
   ]
+
+  const [presentBalance, setPresentBalance] = useState(receivedData.balance)
+  fetch(`http://localhost:8080/getbalance/${receivedData.name}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP ERROR : ${response.status}`)
+      }
+      return response.json()
+    }).then(input => {
+      setPresentBalance(input)
+    })
   return (
     <><Header /><div className='balance'>
       <div className='boxx'>
@@ -26,7 +40,7 @@ export default function Balance() {
         </div>
 
         <div className='pay1'>
-          <div>2,000,000 $</div>
+          <div>{presentBalance.toLocaleString()} $</div>
           <button className='depo' onClick={() => { toggleModal4(); }}>TOP UP</button>
         </div>
       </div>
@@ -45,7 +59,25 @@ export default function Balance() {
               <div style={{ textAlign: "center" }} className='txt1'>ใส่จำนวนเงิน</div>
               <div className='ton'>
                 <input ref={topup} className='banshe' type="number" />
-                <input className='term1' type="button" value="เติมเงิน" />
+                <input className='term1' type="button" value="เติมเงิน" onClick={() => {
+                  fetch(`http://localhost:8080/getbalance/${receivedData.name}`)
+                    .then(response => {
+                      if (!response.ok) {
+                        throw new Error(`HTTP ERROR : ${response.status}`)
+                      }
+                      return response.json()
+                    }).then(a => {
+                      let x = parseInt(a, 10) + parseInt(topup.current.value, 10);
+                      fetch("http://localhost:8080/update/0/" + receivedData.name + "/6/" + x, {
+                        method: "Get",
+                        headers: {
+                          "Content-Type": "application/json"
+                        }
+                      })
+                    })
+
+
+                }} />
 
               </div>
 
@@ -93,4 +125,3 @@ export default function Balance() {
     </div></>
   );
 }
-
