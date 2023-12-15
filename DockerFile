@@ -1,0 +1,23 @@
+FROM node:latest
+
+WORKDIR /FORRES-ALL
+
+COPY package*.json ./
+
+RUN npm install
+RUN npm run dev
+
+COPY . .
+
+WORKDIR /app/backend
+
+FROM golang:1.21
+
+RUN apk add make
+
+CMD ["make","run"]
+
+# if can't run make please commend line 18 and uncommend 23,24 and run
+
+# RUN go build -buildvcs=false -o ./backend/bin/forres ./backend/cmd/api
+# RUN @./backend/bin/forres
